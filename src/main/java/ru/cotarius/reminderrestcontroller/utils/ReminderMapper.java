@@ -5,9 +5,9 @@ import ru.cotarius.reminderrestcontroller.dto.RemindDto;
 import ru.cotarius.reminderrestcontroller.entity.Remind;
 
 @Service
-public class MappingUtils {
+public class ReminderMapper {
 
-    public RemindDto mapToRemindDto (Remind remind){
+    public static RemindDto mapToRemindDto (Remind remind){
         RemindDto remindDto = new RemindDto();
         remindDto.setId(remind.getId());
         remindDto.setTitle(remind.getTitle());
@@ -17,7 +17,7 @@ public class MappingUtils {
         return remindDto;
     }
 
-    public Remind mapToRemindEntity (RemindDto remindDto){
+    public static Remind mapToRemindEntity (RemindDto remindDto){
         Remind remind = new Remind();
         remind.setId(remindDto.getId());
         remind.setTitle(remindDto.getTitle());
